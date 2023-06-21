@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Student Registration Form</title>
+        <style>
+            table{
+                border: 2px solid red;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+        <h1 align = center>Student Registration Form</h1><br><br>
+        <form id="fm" method="post">
+
+            <label for="name">Name : </label>
+            <input type="text" id="name" required><br><br>
+
+            <label for="phone">Phone Number : </label>
+            <input type="text" id="phone" required><br><br>
+
+            <label for="dob">Date of Birth : </label>
+            <input type="date" id="dob"  required><br><br>
+
+            <label for="address">Address : </label>
+            <textarea id="address" required cols="20" rows="5"></textarea><br><br><br>
+
+            Gender : 
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="others" value="others">
+            <label for="others">Others</label><br><br>
+
+            <label >City :</label>
+                    <select name="city" id="city">
+                        <option value="">Select City</option>
+                        <option value="Meerut">Meerut</option>
+                        <option value="Muzaffarnagar">Muzaffarnagar</option>
+                        <option value="Delhi">Delhi</option>
+                    </select><br><br>
+
+            <label >Hobbies:</label>
+            <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+            <label for="hobby1">Playing Football</label><br>
+            <input type="checkbox" id="hobby2" name="hobbies" value="Travelling">
+            <label for="hobby2">Playing Badminton</label><br>
+            <input type="checkbox" id="hobby3" name="hobbies" value="Cooking">
+            <label for="hobby3">Swimming</label><br><br>  
+            
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+
+        <table>
+            <thead>
+              <tr>
+                <th>SNo</th>
+                <th>Name</th>
+                <th>Phone no</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Hobbies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Areeb</td>
+                <td>9898989898</td>
+                <td>Male</td>
+                <td>Meerut</td>
+                <td>Football, Swimming</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mukul</td>
+                <td>8198989898</td>
+                <td>Male</td>
+                <td>Jaunpur</td>
+                <td>Listening Music, Travelling</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Kunal</td>
+                <td>8484848484</td>
+                <td>Male</td>
+                <td>Gorakhpur</td>
+                <td>Writing, Gaming</td>
+              </tr>
+            </tbody>
+        </table>
+
+    </center>
+    </body>
+</html>
