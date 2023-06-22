@@ -7,4 +7,8 @@ node{
     stage('build'){
         sh 'docker build -t form1 .'
     }
+
+    stage("Nexus"){
+        sh 'docker login -u admin -p Areeb@123 127.0.1.1:8087'
+    }
 }
