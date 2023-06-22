@@ -9,6 +9,6 @@ node{
     }
 
     stage("Nexus"){
-        sh 'docker login -u admin -p Areeb@123 172.31.138.178:8087'
+        sh 'docker login -u admin -p Areeb@123 127.0.1.1:8087'
     }
 }
