@@ -14,6 +14,7 @@ node{
     //     sh 'docker push 127.0.1.1:8087/form1:latest'
     // }
     stage("Deployment"){
+        sh 'kubectl version'
         sh 'kubectl get nodes'
         // sh 'kubectl apply -f deployment.yml'
         // sh 'kubectl get pods'
