@@ -15,6 +15,6 @@ node{
     // }
     stage("Deployment"){
         sh 'kubectl create -f deployment.yml'
-        sh 'kubectl get pods'
+        // sh 'kubectl get pods'
     }
 }
