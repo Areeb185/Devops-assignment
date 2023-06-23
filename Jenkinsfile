@@ -8,9 +8,13 @@ node{
         sh 'docker build -t form1 .'
     }
 
-    stage("Nexus"){
-        sh 'docker login -u admin -p Areeb@123 127.0.1.1:8087'
-        sh 'docker tag form1:latest 127.0.1.1:8087/form1:latest '
-        sh 'docker push 127.0.1.1:8087/form1:latest'
+    // stage("Nexus"){
+    //     sh 'docker login -u admin -p Areeb@123 127.0.1.1:8087'
+    //     sh 'docker tag form1:latest 127.0.1.1:8087/form1:latest '
+    //     sh 'docker push 127.0.1.1:8087/form1:latest'
+    // }
+    stage("Deployment"){
+        sh 'kubectl create -f deployment.yml'
+        sh 'kubectl get pods'
     }
 }
