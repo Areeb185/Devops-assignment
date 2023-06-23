@@ -14,10 +14,11 @@ node{
     //     sh 'docker push 127.0.1.1:8087/form1:latest'
     // }
     
-   // stage('Deploying to Kubernetes') {
-   //     withKubeConfig([credentialsId: 'config']){
-   //         sh 'kubectl apply -f deployment.yaml'
-   //         sh 'kubectl get deployment'
-   //     }
-   //  }
+   stage('Deploying to Kubernetes') {
+       withKubeConfig([credentialsId: 'config1']){
+           // sh 'kubectl apply -f deployment.yaml'
+           // sh 'kubectl get deployment'
+           sh 'kubectl cluster-info'
+       }
+    }
 }
