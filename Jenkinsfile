@@ -15,7 +15,7 @@ node{
     // }
    stage('Deploying to Kubernetes') {
         
-withKubeConfig([credentialsId: 'mukube-config']) {
+withKubeConfig([credentialsId: 'config1']) {
  echo "logging  in k8s success"
  sh 'kubectl apply -f Secret.yaml'
  sh 'kubectl apply -f Deployment.yaml'
