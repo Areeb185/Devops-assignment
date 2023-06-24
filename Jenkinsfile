@@ -22,6 +22,7 @@ node{
        withKubeConfig([credentialsId: 'config1']){
            sh 'kubectl apply -f deployment.yml'
            sh 'kubectl get deployment'
+           sh 'kubectl get pods'
        }
     }
 }
