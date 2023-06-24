@@ -13,6 +13,10 @@ node{
         sh 'docker tag form1:latest 127.0.1.1:8087/form1:latest '
         sh 'docker push 127.0.1.1:8087/form1:latest'
     }
+
+    stage('Deploying to Kubernetes'){
+        sh 'minikube status'
+    }
     
    // stage('Deploying to Kubernetes') {
    //     withKubeConfig([credentialsId: 'config1']){
