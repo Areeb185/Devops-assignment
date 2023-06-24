@@ -5,7 +5,7 @@ node{
     }
 
     stage('build'){
-        sh 'docker build -t form1 .'
+        sh 'sudo docker build -t form1 .'
     }
 
     // stage("Nexus"){
