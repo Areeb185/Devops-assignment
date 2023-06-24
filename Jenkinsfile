@@ -20,6 +20,8 @@ node{
     
    stage('Deploying to Kubernetes') {
        withKubeConfig([credentialsId: 'config1']){
+           sh 'kubectl apply -f mynamespace.yml'
+           sh 'kubectl config use-context myNameSpace'
            sh 'kubectl apply -f deployment.yml'
            sh 'kubectl get deployment'
            sh 'kubectl get pods'
