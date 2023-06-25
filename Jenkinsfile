@@ -19,7 +19,7 @@ node{
     // }
     
    stage('Deploying to Kubernetes') {
-       withKubeConfig([credentialsId: 'config2']){
+       withKubeConfig([credentialsId: 'config3']){
            sh 'kubectl cluster-info'
            // sh 'kubectl apply -f deployment.yml'
            // sh 'kubectl get deployment'
