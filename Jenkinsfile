@@ -4,9 +4,9 @@ node{
         git branch: 'master' , url: 'https://github.com/Areeb185/Devops-assignment.git'
     }
 
-//     stage('build'){
-//         sh 'docker build -t form1 .'
-//     }
+    stage('build'){
+        sh 'docker build -t form1 .'
+    }
 
 //     stage("Nexus"){
 //         sh 'docker login -u admin -p Areeb@123 127.0.1.1:8087'
@@ -20,10 +20,10 @@ node{
     
    stage('Deploying to Kubernetes') {
        withKubeConfig([credentialsId: 'config3']){
-           sh 'kubectl cluster-info'
-           // sh 'kubectl apply -f deployment.yml'
-           // sh 'kubectl get deployment'
-           // sh 'kubectl get pods'
+           // sh 'kubectl cluster-info'
+           sh 'kubectl apply -f deployment.yml'
+           sh 'kubectl get deployment'
+           sh 'kubectl get pods'
        }
     }
     
