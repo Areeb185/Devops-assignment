@@ -1,8 +1,8 @@
-// node{
-//     stage('SCM')
-//     {
-//         git branch: 'master' , url: 'https://github.com/Areeb185/Devops-assignment.git'
-//     }
+node{
+    stage('SCM')
+    {
+        git branch: 'master' , url: 'https://github.com/Areeb185/Devops-assignment.git'
+    }
 
 //     stage('build'){
 //         sh 'docker build -t form1 .'
