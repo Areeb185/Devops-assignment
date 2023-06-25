@@ -25,11 +25,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: cicd-service
+  name: form-service
 spec:
   selector:
     app: form
+  type: NodePort
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - protocol: TCP
+    port: 4000
+    targetPort: 80
+    nodePort: 31111
